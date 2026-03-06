@@ -34,7 +34,6 @@ A technical test implementation: an **infinite carousel with 3 banners** for mob
 ### Install and run
 
 ```bash
-cd fe-task
 npm install
 ng serve
 ```
