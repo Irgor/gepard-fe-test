@@ -1,0 +1,25 @@
+<section class="carousel-container">
+
+    <section class="carousel" [style.transform]="bannerOffset()"
+        [style.transitionDuration]="isDragging() ? '0s' : '0.2s'">
+
+        @for (banner of banners; track banner.id) {
+        <section class="banner" [id]="banner.id">
+
+            <img fetchpriority="high" class="banner-background-image block-select" [src]="banner.backgroundImage"
+                alt="Banner background" />
+
+            <section class="banner-content">
+                <img fetchpriority="high" class="banner-main-image block-select" [src]="banner.mainImage"
+                    alt="Banner main image" />
+                <p class="banner-title">{{ banner.title }}</p>
+                <p class="banner-description text-white text-sm">{{ banner.description }}</p>
+                <a class="banner-button text-white text-sm" [href]="banner.buttonLink" target="_blank">{{
+                    banner.buttonText }}</a>
+            </section>
+
+        </section>
+        }
+    </section>
+
+</section>

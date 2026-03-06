@@ -1,0 +1,8 @@
+<main class="home-page">
+
+    @if ($banners().length) {
+    <carousel-banner [banners]="$banners()" />
+    } @else {
+    <skeleton-carousel />
+    }
+</main>
