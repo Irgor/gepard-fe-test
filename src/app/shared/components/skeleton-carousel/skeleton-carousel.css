@@ -1,0 +1,29 @@
+.skeleton-carousel {
+    width: 100vw;
+    max-width: 600px;
+    height: 600px;
+    margin: auto;
+
+    position: relative;
+    overflow: hidden;
+    display: block;
+    background: #2a2f3a;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        transform: translateX(-100%);
+        background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.08) 50%,
+                transparent 100%);
+        animation: shimmer 1.2s infinite;
+    }
+}
+
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
